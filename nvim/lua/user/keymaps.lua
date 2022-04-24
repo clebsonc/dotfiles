@@ -76,3 +76,7 @@ keymap("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", opts)
 -- To send the diagnostics to quickfix list press CTRL + Q
 keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics(require('telescope.themes').get_ivy({ previewer = false, winblend = 10 }))<cr>", opts)  -- option without the previewer with different theme
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)  -- option without the previewer
+
+
+-- Auto formatting
+keymap("n", "<leader>f", ":Format<cr>", opts)

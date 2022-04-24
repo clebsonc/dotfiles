@@ -9,7 +9,7 @@ require("user.pconfigs.autopairs")
 require("user.pconfigs.comment")
 require("user.pconfigs.gitsigns")
 require("user.pconfigs.nvim-tree")
-
+require("user.pconfigs.null-ls")
 
 vim.cmd[[
     colorscheme tomorrow

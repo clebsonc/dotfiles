@@ -12,6 +12,9 @@ require("user.pconfigs.gitsigns")
 require("user.pconfigs.nvim-tree")
 require("user.pconfigs.null-ls")
 require("user.pconfigs.bufferline")
+require("user.pconfigs.neogen")
+require("user.pconfigs.indent")
+require("user.pconfigs.alpha")
 
 vim.cmd[[
     colorscheme tomorrow

@@ -83,3 +83,13 @@ keymap("n", "<leader>fd", "<cmd>lua require'telescope.builtin'.diagnostics(requi
 
 -- Auto formatting
 keymap("n", "<leader>f", ":Format<cr>", opts)
+
+
+-- Generate docstring with neogen
+keymap("n", "<leader>nf", ":Neogen func<CR>", opts)
+keymap("n", "<leader>nc", ":Neogen class<CR>", opts)
+keymap("n", "<leader>nm", ":Neogen file<CR>", opts)
+
+
+-- Show dashboard
+keymap("n", "<leader>dd", ":Alpha<CR>", opts)

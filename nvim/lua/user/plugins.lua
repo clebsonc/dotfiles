@@ -42,35 +42,36 @@ packer.init {
 
 -- Install your plugins here
 return require('packer').startup(function(use)
-    use 'folke/tokyonight.nvim'                            -- colorschme tokyonight
-    use "lunarvim/colorschemes"                            -- Lunar vim Colorscheme
-    use {'dracula/vim', as = 'dracula'}                    -- Dracula Colorscheme
-    use 'wbthomason/packer.nvim'                           -- Packer can manage itsel
-    use "nvim-lua/popup.nvim"                              -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim"                            -- Useful lua functions used by lots of plugins. gx: telescope, null-ls
-    use 'kyazdani42/nvim-web-devicons'                     -- Icons for lua line, telescope and other stuff to work properly.
-    use 'kyazdani42/nvim-tree.lua'                         -- NVim Tree Explorer
-    use "lewis6991/gitsigns.nvim"                          -- Show git symbols for modifications.
-    use "numToStr/Comment.nvim"                            -- Comment Automatically with keymap gcc
-    use 'nvim-lualine/lualine.nvim'                        -- Status line
-    use 'akinsho/bufferline.nvim'                          -- nice tabs to show opened buffers
+    use 'NLKNguyen/papercolor-theme' -- colorscheme papercolor
+    use 'folke/tokyonight.nvim' -- colorscheme tokyonight
+    use "lunarvim/colorschemes" -- Lunar vim Colorscheme
+    use { 'dracula/vim', as = 'dracula' } -- Dracula Colorscheme
+    use 'wbthomason/packer.nvim' -- Packer can manage itsel
+    use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins. gx: telescope, null-ls
+    use 'kyazdani42/nvim-web-devicons' -- Icons for lua line, telescope and other stuff to work properly.
+    use 'kyazdani42/nvim-tree.lua' -- NVim Tree Explorer
+    use "lewis6991/gitsigns.nvim" -- Show git symbols for modifications.
+    use "numToStr/Comment.nvim" -- Comment Automatically with keymap gcc
+    use 'nvim-lualine/lualine.nvim' -- Status line
+    use 'akinsho/bufferline.nvim' -- nice tabs to show opened buffers
 
     -- cmp plugins
-    use "hrsh7th/nvim-cmp"                                 -- The completion plugin
-    use "hrsh7th/cmp-buffer"                               -- buffer completions
-    use "hrsh7th/cmp-path"                                 -- path completions
-    use "hrsh7th/cmp-cmdline"                              -- cmdline completions
-    use "saadparwaiz1/cmp_luasnip"                         -- snippet completions
+    use "hrsh7th/nvim-cmp" -- The completion plugin
+    use "hrsh7th/cmp-buffer" -- buffer completions
+    use "hrsh7th/cmp-path" -- path completions
+    use "hrsh7th/cmp-cmdline" -- cmdline completions
+    use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua"
 
     -- snippets
-    use "L3MON4D3/LuaSnip"                                 -- snippet engine
-    use "rafamadriz/friendly-snippets"                     -- a bunch of snippets to use
+    use "L3MON4D3/LuaSnip" -- snippet engine
+    use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- LSP
-    use "neovim/nvim-lspconfig"                            -- enable LSP
-    use "williamboman/nvim-lsp-installer"                  -- simple to use language server installer
+    use "neovim/nvim-lspconfig" -- enable LSP
+    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
     -- Telescope
     -- install finder: `https://github.com/sharkdp/fd#installation`
@@ -78,7 +79,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         requires = {
-            { 'nvim-lua/plenary.nvim'},
+            { 'nvim-lua/plenary.nvim' },
             { 'nvim-telescope/telescope-live-grep-raw.nvim' },
         },
     }
@@ -88,11 +89,23 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+    use "lukas-reineke/indent-blankline.nvim" -- Show indentation marks.
+    use "danymat/neogen"
     -- use "p00f/nvim-ts-rainbow"
-    use "windwp/nvim-autopairs"                            -- Automatically close symbols () [] {} " ' """.
+    use "windwp/nvim-autopairs" -- Automatically close symbols () [] {} " ' """.
     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-    use "jose-elias-alvarez/null-ls.nvim"                  -- Enable using external tools such as pylint, flake8 anda black
+    use "jose-elias-alvarez/null-ls.nvim" -- Enable using external tools such as pylint, flake8 anda black
+
+    -- use 'goolord/alpha-nvim' -- Dashboard
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha.themes.dashboard'.section.footer.val = require'alpha.fortune'()
+            require'alpha'.setup(require'alpha.themes.dashboard'.opts)
+        end
+    }
+
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

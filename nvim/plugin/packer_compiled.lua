@@ -79,6 +79,12 @@ _G.packer_plugins = {
     path = "/home/clebson/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\n¨\1\0\0\5\0\t\0\0206\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0006\1\0\0'\3\5\0B\1\2\2B\1\1\2=\1\4\0006\0\0\0'\2\6\0B\0\2\0029\0\a\0006\2\0\0'\4\1\0B\2\2\0029\2\b\2B\0\2\1K\0\1\0\topts\nsetup\nalpha\18alpha.fortune\bval\vfooter\fsection\27alpha.themes.dashboard\frequire\0" },
+    loaded = true,
+    path = "/home/clebson/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/clebson/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -134,10 +140,20 @@ _G.packer_plugins = {
     path = "/home/clebson/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/clebson/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/clebson/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  neogen = {
+    loaded = true,
+    path = "/home/clebson/.local/share/nvim/site/pack/packer/start/neogen",
+    url = "https://github.com/danymat/neogen"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -189,6 +205,11 @@ _G.packer_plugins = {
     path = "/home/clebson/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["papercolor-theme"] = {
+    loaded = true,
+    path = "/home/clebson/.local/share/nvim/site/pack/packer/start/papercolor-theme",
+    url = "https://github.com/NLKNguyen/papercolor-theme"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/clebson/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -217,6 +238,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n¨\1\0\0\5\0\t\0\0206\0\0\0'\2\1\0B\0\2\0029\0\2\0009\0\3\0006\1\0\0'\3\5\0B\1\2\2B\1\1\2=\1\4\0006\0\0\0'\2\6\0B\0\2\0029\0\a\0006\2\0\0'\4\1\0B\2\2\0029\2\b\2B\0\2\1K\0\1\0\topts\nsetup\nalpha\18alpha.fortune\bval\vfooter\fsection\27alpha.themes.dashboard\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 if should_profile then save_profiles() end
 
 end)

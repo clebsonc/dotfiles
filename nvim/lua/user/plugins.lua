@@ -52,15 +52,8 @@ return require('packer').startup(function(use)
     use 'kyazdani42/nvim-tree.lua'                         -- NVim Tree Explorer
     use "lewis6991/gitsigns.nvim"                          -- Show git symbols for modifications.
     use "numToStr/Comment.nvim"                            -- Comment Automatically with keymap gcc
-
-
-    -- Status line
-    use {
-        'nvim-lualine/lualine.nvim',
-        config = function()
-            require('user.pconfigs.lualine')
-        end
-    }
+    use 'nvim-lualine/lualine.nvim'                        -- Status line
+    use 'akinsho/bufferline.nvim'                          -- nice tabs to show opened buffers
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"                                 -- The completion plugin

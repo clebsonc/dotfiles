@@ -34,6 +34,9 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>')
 -- Navigate between buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<C-l>", ":BufferLineMoveNext<CR>", opts)
+keymap("n", "<C-h>", ":BufferLineMovePrev<CR>", opts)
+
 
 -- When text is wrapped, move by terminal rows, not lines, unless a count is provided
 keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })

@@ -1,12 +1,12 @@
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'everforest',
+        theme = 'gruvbox-material',
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = {},
         always_divide_middle = true,
-        globalstatus = false,
+        globalstatus = true,
     },
     sections = {
         lualine_a = {'mode'},
@@ -19,8 +19,8 @@ require('lualine').setup {
     inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
+        lualine_c = {}, -- {'filename'},
+        lualine_x = {}, -- {'location'},
         lualine_y = {},
         lualine_z = {}
     },

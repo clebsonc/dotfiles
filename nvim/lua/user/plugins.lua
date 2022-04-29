@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
     use "numToStr/Comment.nvim" -- Comment Automatically with keymap gcc
     use 'nvim-lualine/lualine.nvim' -- Status line
     use 'akinsho/bufferline.nvim' -- nice tabs to show opened buffers
+    use 'akinsho/toggleterm.nvim' -- nice visual interface for neovim terminal
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin

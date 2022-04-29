@@ -93,3 +93,10 @@ keymap("n", "<leader>nm", ":Neogen file<CR>", opts)
 
 -- Show dashboard
 keymap("n", "<leader>dd", ":Alpha<CR>", opts)
+
+
+-- Inner terminal keymaps with toogle term.
+keymap("n", "<leader>tl", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>tn", "<cmd>lua _NCDU_TOGGLE()<CR>", opts)
+keymap("n", "<leader>th", "<cmd>lua _HTOP_TOGGLE()<CR>", opts)
+keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts)

@@ -42,7 +42,6 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup {
     auto_reload_on_write = true,
     disable_netrw = false,
-    hide_root_folder = false,
     hijack_cursor = false,
     hijack_netrw = true,
     hijack_unnamed_buffer_when_opening = false,
@@ -51,15 +50,16 @@ nvim_tree.setup {
     open_on_setup_file = false,
     open_on_tab = false,
     sort_by = "name",
-    update_cwd = true,
+    update_cwd = false,
 
     view = {
-        width = 30,
+        width = 35,
         height = 30,
+        hide_root_folder = false,
         side = "left",
         preserve_window_proportions = false,
-        number = false,
-        relativenumber = false,
+        number = true,
+        relativenumber = true,
         signcolumn = "yes",
         mappings = {
             custom_only = false,
@@ -156,15 +156,5 @@ nvim_tree.setup {
             git = false,
             profile = false,
         },
-    },
-    quit_on_open = true,
-    git_hl = 1,
-    root_folder_modifier = ":t",
-    show_icons = {
-        git = 1,
-        folders = 1,
-        files = 1,
-        folder_arrows = 1,
-        tree_width = 30,
     },
 }

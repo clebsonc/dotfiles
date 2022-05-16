@@ -26,8 +26,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -35,3 +33,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 eval "$(starship init zsh)"
 
+
+# Adding the path to spark binaries:
+export PATH=$PATH:/usr/local/spark/bin
+export PATH=$PATH:/usr/local/spark/sbin

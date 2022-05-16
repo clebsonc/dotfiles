@@ -16,6 +16,7 @@ require("user.pconfigs.neogen")            -- Plugin that enables alto docstring
 require("user.pconfigs.indent")            -- Plugin that enables auto indentation
 require("user.pconfigs.alpha")             -- Plugin that enables the dashboard
 require("user.pconfigs.toggleterm")        -- Plugin that enables the inner terminal styles
+require("user.pconfigs.which-key")        -- Plugin that enables the inner terminal styles
 
 vim.cmd[[
     colorscheme tomorrow

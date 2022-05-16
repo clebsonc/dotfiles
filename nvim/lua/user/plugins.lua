@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim' -- Status line
     use 'akinsho/bufferline.nvim' -- nice tabs to show opened buffers
     use 'akinsho/toggleterm.nvim' -- nice visual interface for neovim terminal
+    use "folke/which-key.nvim"  -- nice popup showing keymaps
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin

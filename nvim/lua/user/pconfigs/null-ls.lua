@@ -13,9 +13,10 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },  -- https://prettier.io/docs/en/index.html
-    formatting.black.with { extra_args = { "--fast" } },  -- https://github.com/psf/black
-    -- formatting.yapf,  -- https://github.com/google/yapf
+    formatting.black,  -- .with { extra_args = { "--fast" } },  -- https://github.com/psf/black
     formatting.stylua,   -- https://github.com/JohnnyMorganz/StyLua
+    formatting.isort,
+    -- formatting.yapf,  -- https://github.com/google/yapf
     diagnostics.flake8,  -- https://github.com/PyCQA/flake8
     -- diagnostics.pylint   -- https://github.com/PyCQA/pylint
   },

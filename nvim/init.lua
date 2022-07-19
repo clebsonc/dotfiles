@@ -18,6 +18,8 @@ require("user.pconfigs.alpha")             -- Plugin that enables the dashboard
 require("user.pconfigs.toggleterm")        -- Plugin that enables the inner terminal styles
 require("user.pconfigs.which-key")        -- Plugin that enables the inner terminal styles
 
+
+-- colorscheme tomorrow
 vim.cmd[[
-    colorscheme tomorrow
+    colorscheme darkplus
 ]]

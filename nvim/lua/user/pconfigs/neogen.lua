@@ -17,7 +17,8 @@ neogen.setup {
         },
         python = {
             template = {
-                annotation_convention = "numpydoc"
+                -- annotation_convention = "numpydoc"
+                annotation_convention = "google_docstrings"
             }
         }
     }

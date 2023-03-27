@@ -76,7 +76,7 @@ end
 local ncdu = Terminal:new({
     cmd = "ncdu",
     dir = "./",
-    direction = "vertical",
+    direction = "float",
     float_opts = {
         border = "curved",
     },

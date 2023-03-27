@@ -20,6 +20,8 @@ require("user.pconfigs.which-key")        -- Plugin that enables the inner termi
 
 
 -- colorscheme tomorrow
+-- add following line in cmd to make background transparent.
 vim.cmd[[
     colorscheme darkplus
+    hi! Normal ctermbg=NONE guibg=NONE
 ]]

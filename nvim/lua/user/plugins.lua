@@ -73,7 +73,11 @@ return require('packer').startup(function(use)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+    use "williamboman/nvim-lsp-installer"
+    -- use 'simrat39/rust-tools.nvim'
+
+    -- Debugging
+    use 'mfussenegger/nvim-dap'
 
     -- Telescope
     -- install finder: `https://github.com/sharkdp/fd#installation`

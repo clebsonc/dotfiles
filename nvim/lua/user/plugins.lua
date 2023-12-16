@@ -49,8 +49,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Packer can manage itsel
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins. gx: telescope, null-ls
-    use 'kyazdani42/nvim-web-devicons' -- Icons for lua line, telescope and other stuff to work properly.
-    use 'kyazdani42/nvim-tree.lua' -- NVim Tree Explorer
+    use 'nvim-tree/nvim-web-devicons' -- Icons for lua line, telescope and other stuff to work properly.
+    use 'nvim-tree/nvim-tree.lua' -- NVim Tree Explorer
     use "lewis6991/gitsigns.nvim" -- Show git symbols for modifications.
     use "numToStr/Comment.nvim" -- Comment Automatically with keymap gcc
     use 'nvim-lualine/lualine.nvim' -- Status line

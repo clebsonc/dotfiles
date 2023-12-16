@@ -1,3 +1,6 @@
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require("user.settings")                   -- Just default nvim configurations
 require("user.keymaps")                    -- Personal Keymaps
 require("user.plugins")                    -- Managed Installed Plugins
@@ -20,9 +23,7 @@ require("user.pconfigs.which-key")        -- Plugin that enables the inner termi
 -- require("user.pconfigs.rust-tools")        -- auto setup nvim lspconfig for rust analyzer
 
 
--- colorscheme tomorrow
 -- add following line in cmd to make background transparent.
 vim.cmd[[
-    colorscheme darkplus
-    hi! Normal ctermbg=NONE guibg=NONE
+    colorscheme spacedark
 ]]

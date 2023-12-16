@@ -8,9 +8,12 @@ lspconfig.pyright.setup {
             analysis = {
                 autoImportCompletions = true,
                 autoSearchPaths = true,
-                diagnosticMode = "workleader",
-                typeCheckingMode = "strict",
+                diagnosticMode = "workspace",
                 useLibraryCodeForTypes = true,
+                reportUnknownMemberType = "warning",
+                reportUnknownArgumentType = "warning",
+                reportUnknownVariableType = "warning",
+                typeCheckingMode = "strict"
             }
         }
     },

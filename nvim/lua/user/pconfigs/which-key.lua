@@ -1,6 +1,6 @@
 local status_ok, whichkey = pcall(require, "which-key")
 if not status_ok then
-    vim.notify("Problem loading toogleterm. Check it out: `https://github.com/akinsho/toggleterm.nvim`")
+    vim.notify("Problem loading which-key.")
     return
 end
 
@@ -9,7 +9,7 @@ whichkey.setup {
         marks = true, -- shows a list of your marks on ' and `
         registers = true, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
         spelling = {
-            enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+            enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
             suggestions = 20, -- how many suggestions should be shown in the list?
         },
         -- the presets plugin, adds help for a bunch of default keybindings in Neovim
@@ -44,7 +44,7 @@ whichkey.setup {
         scroll_up = '<c-u>', -- binding to scroll up inside the popup
     },
     window = {
-        border = "none", -- none, single, double, shadow
+        border = "double", -- none, single, double, shadow
         position = "bottom", -- bottom, top
         margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
         padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]

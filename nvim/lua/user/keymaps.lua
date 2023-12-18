@@ -1,5 +1,6 @@
 local opts = { noremap = true, silent = true }
 
+
 -- short function name for mapping
 local keymap = vim.api.nvim_set_keymap
 
@@ -20,10 +21,10 @@ vim.g.maplocalleader = ' '
 
 -- Normal
 -- Faster navigation between split windows.
-keymap('n', '<C-h>', '<C-W>h', opts)
-keymap('n', '<C-j>', '<C-W>j', opts)
-keymap('n', '<C-k>', '<C-W>k', opts)
-keymap('n', '<C-l>', '<C-W>l', opts)
+-- keymap('n', '<C-h>', '<C-W>h', opts)
+-- keymap('n', '<C-j>', '<C-W>j', opts)
+-- keymap('n', '<C-k>', '<C-W>k', opts)
+-- keymap('n', '<C-l>', '<C-W>l', opts)
 
 -- Resize with arrows
 vim.keymap.set('n', '<C-Up>', ':resize +2<CR>')

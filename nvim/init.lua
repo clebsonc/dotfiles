@@ -1,6 +1,3 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 require("user.settings")                   -- Just default nvim configurations
 require("user.keymaps")                    -- Personal Keymaps
 require("user.plugins")                    -- Managed Installed Plugins
@@ -10,7 +7,7 @@ require("user.pconfigs.lsp")               -- Plugin that configure Nvim LSP
 require("user.pconfigs.telescope")         -- Plugin that enables fuzzy finder
 require("user.pconfigs.treesitter")        -- Plugin that enables parses the code for better LSP suport
 require("user.pconfigs.autopairs")         -- Auto close brackets
-require("user.pconfigs.comment")           -- Auto comment with gcc
+-- require("user.pconfigs.comment")           -- Auto comment with gcc
 require("user.pconfigs.gitsigns")          -- Enables Git signs on the left gutter
 require("user.pconfigs.nvim-tree")         -- File explorer
 require("user.pconfigs.null-ls")           -- Allows to use external sources for lintes (ge: Flake8, Pylint, Pydocstyle, mypy, etc.)
@@ -23,7 +20,13 @@ require("user.pconfigs.which-key")        -- Plugin that enables the inner termi
 -- require("user.pconfigs.rust-tools")        -- auto setup nvim lspconfig for rust analyzer
 
 
+-- colorscheme tomorrow
+-- colorscheme habamax
 -- add following line in cmd to make background transparent.
 vim.cmd[[
-    colorscheme spacedark
+    colorscheme darkplus
+    hi! Normal ctermbg=NONE guibg=NONE
 ]]
+
+vim.notify = require("notify")
+

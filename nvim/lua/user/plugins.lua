@@ -46,17 +46,20 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim' -- colorscheme tokyonight
     use "lunarvim/colorschemes" -- Lunar vim Colorscheme
     use { 'dracula/vim', as = 'dracula' } -- Dracula Colorscheme
-    use 'wbthomason/packer.nvim' -- Packer can manage itsel
-    use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+    use 'wbthomason/packer.nvim' -- Packer can manage itself
+
+    -- use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins. gx: telescope, null-ls
-    use 'nvim-tree/nvim-web-devicons' -- Icons for lua line, telescope and other stuff to work properly.
-    use 'nvim-tree/nvim-tree.lua' -- NVim Tree Explorer
+    use 'kyazdani42/nvim-web-devicons' -- Icons for lua line, telescope and other stuff to work properly.
+    use 'kyazdani42/nvim-tree.lua' -- NVim Tree Explorer
     use "lewis6991/gitsigns.nvim" -- Show git symbols for modifications.
     use "numToStr/Comment.nvim" -- Comment Automatically with keymap gcc
     use 'nvim-lualine/lualine.nvim' -- Status line
     use 'akinsho/bufferline.nvim' -- nice tabs to show opened buffers
     use 'akinsho/toggleterm.nvim' -- nice visual interface for neovim terminal
-    use "folke/which-key.nvim"  -- nice popup showing keymaps
+    use {
+        "folke/which-key.nvim"  -- nice popup showing keymaps
+    }
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -73,7 +76,8 @@ return require('packer').startup(function(use)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/nvim-lsp-installer"
+    use { "williamboman/mason.nvim" }
+    -- use "williamboman/nvim-lsp-installer"
     -- use 'simrat39/rust-tools.nvim'
 
     -- Debugging
@@ -99,7 +103,7 @@ return require('packer').startup(function(use)
     use "danymat/neogen"
     -- use "p00f/nvim-ts-rainbow"
     use "windwp/nvim-autopairs" -- Automatically close symbols () [] {} " ' """.
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
+    -- use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     use "jose-elias-alvarez/null-ls.nvim" -- Enable using external tools such as pylint, flake8 anda black
 
@@ -114,6 +118,9 @@ return require('packer').startup(function(use)
 
     -- vim fugitive
     use "tpope/vim-fugitive"
+
+    -- vim notify
+    use 'rcarriga/nvim-notify'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

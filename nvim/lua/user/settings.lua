@@ -33,16 +33,18 @@ local options = {
     splitright = true,
     splitbelow = true,
     updatetime = 250,                            -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience.
-    timeoutlen = 1000,                           -- time to wait for a mapped sequence to complete (in milliseconds)
-    redrawtime = 10000,                          -- Allow more time to load syntax for large files.
+    -- timeoutlen = 1000,                           -- time to wait for a mapped sequence to complete (in milliseconds)
+    timeout = true,
+    timeoutlen = 0,                           -- time to wait for a mapped sequence to complete (in milliseconds)
+    redrawtime = 5000,                          -- Allow more time to load syntax for large files.
     backup = false,
     writebackup = false,                         -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
     undofile = false,                            -- if enabled allow to perform undo operations after rebooting or closing the file.
     list = true,
-    -- listchars =, {eol = '↲', tab = '▸ ', trail = '·'}
-    listchars = {tab = '▸ ', trail = '·'},
+    listchars = {eol = '↲', tab = '▸ ', trail = '·'},
+    -- listchars = {tab = '▸ ', trail = '·'},
     cursorline = true,
-    -- colorcolumn = '100',                         -- highlight column
+    colorcolumn = '100',                         -- highlight column
     termguicolors = true,                        -- allow more colors in the terminal
     scrolloff = 8,
     sidescrolloff = 8,
@@ -50,6 +52,7 @@ local options = {
     inccommand= 'split',
     showmode = false,
     showtabline = 2,                             -- always show tabs
+    textwidth = 100
 }
 
 for key, value in pairs(options) do
@@ -57,6 +60,3 @@ for key, value in pairs(options) do
 end
 
 -- vim.o.fillchars = 'eob: '
-
-
-

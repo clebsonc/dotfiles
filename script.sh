@@ -2,7 +2,7 @@
 
 
 cp -r ~/.config/nvim .
-cp -r ~/.config/kitty .
+# cp -r ~/.config/kitty .
 # cp ~/.config/starship.toml .
 # cp ~/.gitconfig .
 # cp ~/.zshrc .

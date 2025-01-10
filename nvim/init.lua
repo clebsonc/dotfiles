@@ -17,6 +17,7 @@ require("user.pconfigs.indent")            -- Plugin that enables auto indentati
 require("user.pconfigs.alpha")             -- Plugin that enables the dashboard
 require("user.pconfigs.toggleterm")        -- Plugin that enables the inner terminal styles
 require("user.pconfigs.which-key")        -- Plugin that enables the inner terminal styles
+require("user.pconfigs.notify")        -- Plugin that enables the inner terminal styles
 -- require("user.pconfigs.rust-tools")        -- auto setup nvim lspconfig for rust analyzer
 
 
@@ -29,4 +30,3 @@ vim.cmd[[
 ]]
 
 vim.notify = require("notify")
-

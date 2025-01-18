@@ -1,12 +1,14 @@
 [[language]]
-name = "rust"
-# language-server = { command = "rust-analyzer", args = ["--stdio"]}
-# config = {"rust" = {serverPath = "/home/clebson/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer"}}
-[language.config.check]
-command = "clippy"
-
-[[language]]
 name = "python"
 roots = ["pyproject.toml"]
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-config = {} # <- this is the important line
+language-servers = ["pyright", "ruff"]
+auto-format = true
+
+[language-server.pyright]
+timeout = 200
+inlay-hints = true
+
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]

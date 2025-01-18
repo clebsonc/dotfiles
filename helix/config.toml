@@ -1,13 +1,20 @@
-theme = "onedark"
+theme = "jetbrains_dark"
 
 [editor]
 line-number = "relative"
-mouse = true
-cursorline = true
-auto-save = true
-idle-timeout = 0
+end-of-line-diagnostics = "hint"
+completion-timeout = 5
+completion-replace = true
+true-color = true
 bufferline = "always"
-color-modes = true
+popup-border = "all"
+rulers = [100]
+[editor.inline-diagnostics]
+cursor-line = "hint" # show warnings and errors on the cursorline inline
+# other-lines = "error"
+
+[editor.auto-save]
+focus-lost = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,9 +22,8 @@ normal = "block"
 select = "underline"
 
 [editor.file-picker]
-hidden = true
-git-ignore = true
-
+hidden = true      # if true do not show hidden files
+git-ignore = true  # if true do not show git ignore files
 
 [editor.lsp]
 display-messages = true
@@ -25,15 +31,15 @@ display-inlay-hints = true
 
 [editor.indent-guides]
 render = true
-character = "┆"  # Some characters that work well: "▏", "╎", "┆", "┊", "⸽"
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+left = ["mode", "spinner", "version-control", "diagnostics"]
+center = ["read-only-indicator", "file-name", "file-modification-indicator", "file-encoding"]
+right = [ "selections", "position", "position-percentage",  "file-type"]
 separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"

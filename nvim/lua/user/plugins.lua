@@ -75,7 +75,10 @@ return require('packer').startup(function(use)
     use "hrsh7th/cmp-nvim-lua"
 
     -- snippets
-    use "L3MON4D3/LuaSnip" -- snippet engine
+    use {
+        "L3MON4D3/LuaSnip", -- snippet engine
+        dependencies = { "rafamadriz/friendly-snippets" }
+    }
     -- use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- LSP
@@ -85,7 +88,7 @@ return require('packer').startup(function(use)
     -- use 'simrat39/rust-tools.nvim'
 
     -- Debugging
-    use 'mfussenegger/nvim-dap'
+    -- use 'mfussenegger/nvim-dap'
 
     -- Telescope
     -- install finder: `https://github.com/sharkdp/fd#installation`

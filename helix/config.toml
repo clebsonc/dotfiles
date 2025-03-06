@@ -2,13 +2,13 @@ theme = "jetbrains_dark"
 
 [editor]
 line-number = "relative"
+rulers = [100]
 end-of-line-diagnostics = "hint"
 completion-timeout = 5
 completion-replace = true
 true-color = true
 bufferline = "always"
 popup-border = "all"
-rulers = [100]
 [editor.inline-diagnostics]
 cursor-line = "hint" # show warnings and errors on the cursorline inline
 # other-lines = "error"
@@ -24,6 +24,7 @@ select = "underline"
 [editor.file-picker]
 hidden = true      # if true do not show hidden files
 git-ignore = true  # if true do not show git ignore files
+parents = true
 
 [editor.lsp]
 display-messages = true
@@ -31,13 +32,13 @@ display-inlay-hints = true
 
 [editor.indent-guides]
 render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "┊" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "diagnostics"]
-center = ["read-only-indicator", "file-name", "file-modification-indicator", "file-encoding"]
+left = ["mode", "spacer", "spinner", "spacer", "version-control"]
+center = ["read-only-indicator", "spacer", "diagnostics", "file-name", "file-modification-indicator", "file-encoding"]
 right = [ "selections", "position", "position-percentage",  "file-type"]
 separator = "│"
 mode.normal = "NOR"
